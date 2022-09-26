@@ -3,7 +3,7 @@
 const BASE_URL = 'http://aholding.com.bh:1337/api';
 
 const init = async () => {
-    const users = await fetch(`${BASE_URL}/wallets?sort[0]=id%3Aasc`, {
+    const users = await fetch(`${BASE_URL}/wallets?sort[0]=id%3Aasc&pagination[pageSize]=100`, {
 
         headers: {
             'Content-Type': 'application/json',
