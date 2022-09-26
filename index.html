@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
     <title>Test Pool888</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container my-5">
-        <div class="header mb-5">
-            <h1>Testing Pool888 Query</h1>
-        </div>
-        <div class="mb-3">
-            <label for="userSel">Select Wallet</label>
-            <select class="form-select" id="userSel" aria-label="Default select example">
-                <option selected>Select Wallet</option>
-                
-            </select>
-        </div>
-        <div class="mb-5">
-            <button type="button" class="btn btn-primary">Harvest</button>
-            <button type="button" class="btn btn-primary">Withdrawl</button>
-        </div>
-        <div class="">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Profit</th>
-                    <th scope="col">Commission</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                  </tr>
-                
-                </tbody>
-              </table>
-        </div>
+      <div class="header mb-5">
+        <h1>Testing Pool888 Query</h1>
+      </div>
+      <div class="mb-3">
+        <label for="userSel">Select Wallet</label>
+        <select
+          class="form-select"
+          id="userSel"
+          aria-label="Default select example"
+        >
+          <option selected>Select Wallet</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="apy" class="form-label">APY / Minute</label>
+        <input disabled type="text" class="form-control" id="apy" value="0.002117504">
+      </div>
+      <div class="mb-5">
+        <button type="button" class="btn btn-primary" id="btnHarvest">Harvest</button>
+        <!-- <button type="button" class="btn btn-primary">Withdrawl</button> -->
+      </div>
+      <div class="mb-5" id="harvest">
+        <h2>Harvest Details</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-center" scope="col">This Farmer</th>
+              <th class="text-center" scope="col">Package Name</th>
+              <th class="text-center" scope="col">Package Value</th>
+              <th class="text-center" scope="col">Profit</th>
+              <th class="text-center" scope="col">Commission</th>
+              <th class="text-center" scope="col">From Farmer</th>
+              <th class="text-center" scope="col">Level</th>
+              <th class="text-center" scope="col">Harvest Minutes</th>
+              <th class="text-center" scope="col">APY</th>
+              <th class="text-center" scope="col">Percentage</th>
+              <th class="text-center" scope="col">Last Harvest Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mb-5" id="withdraw">
+        <h2>Withdrawl Details</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-center" scope="col">This Farmer</th>
+              <th class="text-center" scope="col">Package Name</th>
+              <th class="text-center" scope="col">Package Value</th>
+              <th class="text-center" scope="col">Profit</th>
+              <th class="text-center" scope="col">Commission</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./main.js"></script>
-</body>
-
+  </body>
 </html>
