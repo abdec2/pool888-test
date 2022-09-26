@@ -1,6 +1,6 @@
 'use strict'
 
-const BASE_URL = 'http://localhost:1337/api';
+const BASE_URL = 'http://aholding.com.bh:1337/api';
 
 const init = async () => {
     const users = await fetch(`${BASE_URL}/wallets?sort[0]=id%3Aasc`, {
@@ -12,7 +12,7 @@ const init = async () => {
         method: 'GET'
     })
     const userObj = await users.json();
-    console.log(userObj.data)
+    console.log(userObj)
     const select = document.querySelector('#userSel');
     userObj.data.map(item => {
         if (item.attributes.parent_wallet_id) {
@@ -70,8 +70,8 @@ const withdraw = (data) => {
     let profit = 0.00;
     let commission = 0.00;
     data.map(item => {
-        profit = parseFloat(item.profit) + profit;
-        commission += parseFloat(item.commission) + commission;
+        profit += parseFloat(item.profit);
+        commission += parseFloat(item.commission);
 
     })
 
